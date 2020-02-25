@@ -10,6 +10,6 @@
 
 void setLedState(uint8_t);
 
-void ledControllerInit();
+void initLedController();
 
 #endif
