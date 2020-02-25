@@ -8,6 +8,7 @@
 #include "nvs_flash.h"
 
 void mainLoop(void){
+    getJson();
 }
 
 void init(void){
@@ -19,4 +20,5 @@ void init(void){
     }     
     initLedController();
     initNetworkController();
+
 }
