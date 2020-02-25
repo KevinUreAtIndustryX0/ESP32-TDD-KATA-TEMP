@@ -1,0 +1,51 @@
+name: CI-getting-started-esp32
+on: [push]
+
+jobs:
+    build:
+  
+      runs-on: ubuntu-latest
+      container: toddflanders/esp-idf4-tdd:0.0.2
+      steps:
+        - name: checkout
+          uses: actions/checkout@v1
+        - name: installProductionCodeRequirements
+          run: /usr/bin/python -m pip install --user -r /opt/local/espressif/esp-idf/requirements.txt
+        - name: generate make files for testing
+          run: cd test
+            && mkdir build 
+            && cd build 
+            && cmake .. -Wno-dev
+        - name: build executables for testing
+          run: cd test/build 
+            && cmake --build .
+        - name: run tests
+          run: cd test/build/bin
+             && rm CMakeCXXCompilerId
+             && for f in *; do ./$f; done
+        - name: create semantic version tag
+          uses: mathieudutour/github-tag-action@v3
+          with:
+            github_token: ${{ secrets.GITHUB_TOKEN }}
+          id: tag-it
+        - name: generate make files for release
+          run: idf.py build -DGitTag=${{steps.tag-it.outputs.new_tag}}
+        - name: build executables for release
+          run: cd test/build
+            && cmake --build .
+        - name: tar artifacts
+          run: |
+            echo "building tarball..."
+            cd build
+            tar -cvf build.tar *
+        - name: release
+          uses: marvinpinto/action-automatic-releases@latest
+          with:
+            repo_token: "${{ secrets.GITHUB_TOKEN }}"
+            automatic_release_tag: "${{steps.tag-it.outputs.new_tag}}"
+            prerelease: false
+            title: "${{github.workflow}}"
+            files: |
+               build/build.tar
+           
+           
