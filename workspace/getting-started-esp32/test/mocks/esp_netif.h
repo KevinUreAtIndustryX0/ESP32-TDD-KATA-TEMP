@@ -2,6 +2,7 @@
 #define _ESP_NETIF_MOCK_H_
 
 #include "esp_err.h"
+#include "fff.h"
 
 DECLARE_FAKE_VALUE_FUNC(esp_err_t, esp_netif_init)
 
