@@ -25,4 +25,6 @@ write mocks for
     gpio_set_level();
     #include <stdint.h>
 
+define blank init_led
+
 write test for init_led to call each of those once
