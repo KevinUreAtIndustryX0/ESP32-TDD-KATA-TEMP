@@ -11,7 +11,7 @@ remove media, .github, docs, test/hardware_libraries, test/led_controller_tests.
 
 in main.c take out lines 11-13 and 3-4
 
-remove line 4 of main/CMakeLists.txt
+remove line 3&4 of main/CMakeLists.txt
 
 ########## hello world ###########
 
