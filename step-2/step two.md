@@ -8,4 +8,6 @@ priv_req driver in cmake
 
 define an init function
 
+write a mock for driver/gpio
+
 write a test for app_logic_init calling ledctrlr init
