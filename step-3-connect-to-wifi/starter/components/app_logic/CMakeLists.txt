@@ -1,3 +1,3 @@
 idf_component_register(SRCS "app_logic.c"
                     INCLUDE_DIRS "./include"
-                    REQUIRES led_controller network_controller)
+                    REQUIRES led_controller)

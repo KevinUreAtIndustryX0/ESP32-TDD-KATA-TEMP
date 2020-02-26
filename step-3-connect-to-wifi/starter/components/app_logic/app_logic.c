@@ -5,7 +5,6 @@
 
 void app_init(void) {
     init_led_controller();
-    init_network_controller();
 }
 
 void app_do_work(void) {
