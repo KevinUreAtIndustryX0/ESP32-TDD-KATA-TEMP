@@ -5,10 +5,22 @@ define an init
 test drive app_init calling network init
  - dont forget the cmakelists
 
-mock for err and netif
+mock for err and nvs
 
-tdd for appinit nvs
+tdd app init should flash nvs
+ - if flash returns 1 of 2 error codes it should erase and call again
+ - switch tests to a fixture so your mocks get reset
+ - dont forget the cmake!
 
-tdd net_init calling netif_init
+mocks for netif and event
 
-tdd net_init calling default_loop
+tdd net_init should init netif and then create event loop
+ - switch tests to a fixture so your mocks get reset
+ - dont forget the cmake!
+
+ ------ TODO TOMORROW -------
+ call example connect
+ mock example connect
+ test example connect
+ run on HW to see IP
+ tdd led when connected
