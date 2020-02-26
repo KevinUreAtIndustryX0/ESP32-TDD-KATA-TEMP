@@ -7,6 +7,6 @@
 #define LED_ON HIGH
 #define LED_OFF LOW
 
-void init_led_controller(void)
+void init_led_controller(void);
 
 #endif
