@@ -1,6 +1,9 @@
 #ifndef _MOCK_GPIO_H_
 #define _MOCK_GPIO_H_
 
+#include <stdint.h>
+#include "fff.h"
+
 #define GPIO_NUM_23 23
 #define HIGH 1
 #define LOW 0

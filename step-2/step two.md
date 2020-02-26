@@ -23,5 +23,6 @@ write mocks for
     gpio_pad_select_gpio();
     gpio_set_direction();
     gpio_set_level();
+    #include <stdint.h>
 
 write test for init_led to call each of those once
