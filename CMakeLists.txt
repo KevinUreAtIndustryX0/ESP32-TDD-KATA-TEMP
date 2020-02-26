@@ -19,3 +19,4 @@ SET(CPROJECT_NAME "${TEMP_PROJECT_NAME}" CACHE STRING "C-Identifier-Friendly pro
 configure_file(CmakeConfig.h.in CmakeConfig.h)
 include_directories(${CMAKE_CURRENT_BINARY_DIR})
 include_directories(${PROJECT_BINARY_DIR})
+
