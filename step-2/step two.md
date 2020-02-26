@@ -40,3 +40,6 @@ write test for init_led to call each of those once
 
 see red
 
+implement init
+
+see green
