@@ -13,7 +13,7 @@ Note:  This link takes you out of the project
 
 ### Using Docker for development
 
-This script (in the project root) will start docker in a mode that DOES NOT allows access to the ESP-32 via USB Serial:
+This script (in the project root) will start docker in a mode that DOES NOT allow access to the ESP-32 via USB Serial:
 
 ```
 ./dockerDev.sh
