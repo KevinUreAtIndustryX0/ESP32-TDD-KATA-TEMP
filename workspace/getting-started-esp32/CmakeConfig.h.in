@@ -1,0 +1,7 @@
+#define  @CPROJECT_NAME@_GitTag "@GitTag@"
+
+char* @CPROJECT_NAME@_buildDate(char* buffer)
+{
+    sprintf(buffer, "%s %s", __DATE__, __TIME__); 
+    return buffer;
+}
