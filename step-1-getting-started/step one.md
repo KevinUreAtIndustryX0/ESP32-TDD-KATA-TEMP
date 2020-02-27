@@ -2,6 +2,7 @@ todo: delete common.h
 todo: give main a common interface
 todo?: a cleanup script in esp32 repo
 todo: migrate the make component script
+.gitignore to contain sdkconfig.old
 
 ########### SETUP #############
 

@@ -1,3 +1,5 @@
+make led init the led to off
+
 make a network controller
 
 define an init
@@ -18,9 +20,14 @@ tdd net_init should init netif and then create event loop
  - switch tests to a fixture so your mocks get reset
  - dont forget the cmake!
 
- ------ TODO TOMORROW -------
- call example connect
- mock example connect
- test example connect
- run on HW to see IP
- tdd led when connected
+mock for example_connect in protocol_examples_common.h
+
+tdd network controller to call exampleconnect
+ - root cmake needs edit
+
+tdd led controller set function
+
+tdd for network controller to set led on after connection
+
+menuconfig
+build and flash
