@@ -160,4 +160,4 @@ If you didn't get that far, please review the [Setup](../step-0-setup/README.md)
 
 You can exit the docker container and return to your host terminal by executing the `exit` command.
 
-Proceed to [Step 1:  Getting Started](../step-1-getting-started/step%20one.md)
+Proceed to [Step 1:  Getting Started](../step-1-getting-started/README.md)
