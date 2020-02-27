@@ -1,0 +1,7 @@
+esp_http_client_event_t
+esp_http_client_config_t
+esp_http_client_handle_t
+esp_http_client_init
+esp_http_client_open
+esp_http_client_fetch_headers
+esp_http_client_read

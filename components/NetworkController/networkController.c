@@ -33,7 +33,7 @@ void getJson() {
 
     esp_err_t err;
     if((err = esp_http_client_open(clientHandler, 0)) != ESP_OK) {
-        ESP_LOGE("OUR_APP", "failed to open http client connection: %s", esp_err_to_name(err));
+        ESP_LOGE("OUR_APP", "failed to open http client connection");
         free(buffer);
         return;
     }
