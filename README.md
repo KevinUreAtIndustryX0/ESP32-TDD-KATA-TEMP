@@ -28,12 +28,13 @@ If your ESP-32 does not have an on-board LED on GPIO2, you will also need a prot
 
 Note:  As of this writing, the kata is not tested with the newer ESP-32s boards (should work?).
 
-*TODO*: link to section explaining how to wire the LED for boards lacking an on-board LED.
+## For ESP-32 boards with no on-board LED:
 
+*TODO*: link to section explaining how to wire the LED for boards lacking an on-board LED.
 
 ## Reference
  - [Espressif IoT Development Framework](https://github.com/espressif/esp-idf)
  - [Google Test](https://github.com/google/googletest)
  - [Fake Function Framework (fff)](https://github.com/meekrosoft/fff)
 
-
+Proceed to [Step 0: Setup](../step-0-setup/README.md)
