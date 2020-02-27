@@ -4,7 +4,7 @@ make event handler (dont test b/c its no_op)
  -include
  -cmake
 
-tdd getjson calls logi
+tdd getjson calls log_i
 
 tdd getjson 
  - calls_http_client_init
@@ -14,3 +14,6 @@ tdd getjson
  - calls_esp_http_client_read
 
 tdd app_do_work calls get_json
+
+flash monitor to see json data
+ - dont forget menuconfig
