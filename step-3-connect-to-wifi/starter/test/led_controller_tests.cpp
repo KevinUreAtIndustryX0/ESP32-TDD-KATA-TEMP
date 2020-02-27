@@ -23,7 +23,7 @@ TEST(init_led_controller, calls_gpio) {
 
     EXPECT_EQ(gpio_set_level_fake.call_count, 1);
     EXPECT_EQ(gpio_set_level_fake.arg0_history[0], LED_PIN);
-    EXPECT_EQ(gpio_set_level_fake.arg1_history[0], LED_OFF);
+    EXPECT_EQ(gpio_set_level_fake.arg1_history[0], LED_ON);
 
     RESET_FAKE(gpio_set_level);
     RESET_FAKE(gpio_pad_select_gpio);
