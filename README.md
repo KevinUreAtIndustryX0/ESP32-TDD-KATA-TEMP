@@ -3,6 +3,9 @@
 This tutorial will lead you step-by-step in creating an embedded application for the ESP-32 using the ESP-IDF version 4 toolkit.
 
 The embedded appication will perform the following tasks:
+
+*TODO*: revisit these tasks according to kata enhancements:
+
   - Light an LED to indicate the ESP-32 is about to connect as a network station
   - Connect to your router as a network station using the ssid and password you supplied
   - Upon successful connection, turn the LED off
@@ -13,10 +16,12 @@ The embedded appication will perform the following tasks:
 
 After this tutorial you will:
  - Understand the ESP-IDF4 component model, and know how to design and create new components.
+ - Understand how to program the ESP-32 as a network client.
+ - Understand what GPIO is and how to write to it to light an LED
  - Test-drive components using GoogleTest (GTest).
- - Mock test boundries using the Fake Function Framework (FFF)
+ - Mock test boundries using thxe Fake Function Framework (FFF)
  - Feel a rush of empowerment, since you now can create embedded devices that are limited only by your imagination.
-
+ 
 ## Materials needed:
 
 - Dev workstation capable of running Docker (Windows 10, Mac, or Linux)
