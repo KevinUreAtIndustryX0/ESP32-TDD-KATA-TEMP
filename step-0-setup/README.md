@@ -105,6 +105,59 @@ ls: /dev/cu.S*: No such file or directory
 
 Note also that stopping the VirtualBox using `docker-machine stop` makes the driver once-again available to the Mac's bare metal.
 
-At this point you are all set to use the build tools under docker for coding, testing, building, flashing, and monitoring the ESP-32.
+At this point you are all set to use the build tools under docker for coding, testing, building, flashing, and monitoring the ESP-32.  Let's verify that this is true.
+
+## Verifying Docker Setup
+
+- Open a terminal window and set the working directory to this tutorial's project root.
+- Run the script `./vmDockerDev.sh`.
+- Verify the output:
+```
+Stopping "default"...
+Machine "default" is already stopped.
+Starting "default"...
+(default) Check network to re-create if needed...
+(default) Waiting for an IP...
+```
+- Note that it may take some time to get the IP.  Wait until you see:
+
+```
+Stopping "default"...
+Machine "default" is already stopped.
+Starting "default"...
+(default) Check network to re-create if needed...
+(default) Waiting for an IP...
+Machine "default" was started.
+Waiting for SSH to be available...
+Detecting the provisioner...
+Started machines may have new IP addresses. You may need to re-run the `docker-machine env` command.
+Adding ESP-IDF tools to PATH...
+Checking if Python packages are up to date...
+Python requirements from /opt/esp/idf/requirements.txt are satisfied.
+Added the following directories to PATH:
+  /opt/esp/idf/components/esptool_py/esptool
+  /opt/esp/idf/components/espcoredump
+  /opt/esp/idf/components/partition_table/
+  /opt/esp/tools/xtensa-esp32-elf/esp-2019r2-8.2.0/xtensa-esp32-elf/bin
+  /opt/esp/tools/xtensa-esp32s2-elf/esp-2019r2-8.2.0/xtensa-esp32s2-elf/bin
+  /opt/esp/tools/esp32ulp-elf/2.28.51-esp-20191205/esp32ulp-elf-binutils/bin
+  /opt/esp/tools/esp32s2ulp-elf/2.28.51-esp-20191205/esp32s2ulp-elf-binutils/bin
+  /opt/esp/tools/cmake/3.13.4/bin
+  /opt/esp/tools/openocd-esp32/v0.10.0-esp32-20191114/openocd-esp32/bin
+  /opt/esp/python_env/idf4.1_py3.6_env/bin
+  /opt/esp/idf/tools
+Done! You can now compile ESP-IDF projects.
+Go to the project directory and run:
+
+  idf.py build
+
+root@a3b2ae8ff01e:/workdir# 
+```
+
+At this point you are inside of a docker container with access to the ESP-IDF toolchain and the necessary tools for C / C++ development.
+
+If you didn't get that far, please review the [Setup](../step-0-setup/README.md) instructions.
+
+You can exit the docker container and return to your host terminal by executing the `exit` command.
 
 Proceed to [Step 1:  Getting Started](../step-1-getting-started/step%20one.md)
