@@ -37,4 +37,4 @@ Note:  As of this writing, the kata is not tested with the newer ESP-32s boards 
  - [Google Test](https://github.com/google/googletest)
  - [Fake Function Framework (fff)](https://github.com/meekrosoft/fff)
 
-Proceed to [Step 0: Setup](../step-0-setup/README.md)
+Proceed to [Step 0: Setup](step-0-setup/README.md)
