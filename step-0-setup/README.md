@@ -107,4 +107,4 @@ Note also that stopping the VirtualBox using `docker-machine stop` makes the dri
 
 At this point you are all set to use the build tools under docker for coding, testing, building, flashing, and monitoring the ESP-32.
 
-Proceed to [Step 1:  Getting Started](../step1-getting-started/README.md)
+Proceed to [Step 1:  Getting Started](../step1-getting-started/step%20one.md)

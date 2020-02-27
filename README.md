@@ -30,56 +30,10 @@ Note:  As of this writing, the kata is not tested with the newer ESP-32s boards 
 
 *TODO*: link to section explaining how to wire the LED for boards lacking an on-board LED.
 
-*TODO*: Do we need any of the following?
-# ESP32 Starter
-Using ESP-IDF<sup> [link](https://github.com/espressif/esp-idf)</sup> to be able to flash to an ESP32
-and googletest<sup> [link](https://github.com/google/googletest)</sup> to run tests.
- FFF<sup> [link](https://github.com/meekrosoft/fff)</sup> was used to mock files for testing.
-<br/>
 
-Additional Links:
- - [Tool Chain Installation and Setup](docs/setup.md)
- - [Semantic Versioning](https://github.com/PillarTechnology/embedded-craftsmanship/blob/master/docs/semverQuickStart.md)
-Note:  This link takes you out of the project
-
-### Using Docker for development
-
-This script (in the project root) will start docker in a mode that DOES NOT allow access to the ESP-32 via USB Serial:
-
-```
-./dockerDev.sh
-```
-
-To start docker development using the virtual box so you can access the ESP-32 via USB Serial, run the script:
-
-```
-./vmDockerDev.sh
-```
-
-### **Run Tests**
-
-to run the tests run `bash runTests.sh`
-
-**NOTE** if you see the error
-
-```
-CMake Error: The current CMakeCache.txt directory /workdir/test/build/CMakeCache.txt is different 
-than the directory <PROJECTFOLDER>/embedded-craftsmanship/getting-started-esp32/test/build where 
-CMakeCache.txt was created. This may result in binaries being created in the wrong place.
-```
-
-then run `rm -rf test/build` then try running the command again
+## Reference
+ - [Espressif IoT Development Framework](https://github.com/espressif/esp-idf)
+ - [Google Test](https://github.com/google/googletest)
+ - [Fake Function Framework (fff)](https://github.com/meekrosoft/fff)
 
 
-**NOTE:** If you are developing using docker without added capacitor you will need to hold the boot button as it is trying to connect for more details see <sup>[link](https://randomnerdtutorials.com/solved-failed-to-connect-to-esp32-timed-out-waiting-for-packet-header/)</sup>.
-
-**NOTE:** if you have a non-standard partition table you will need to adjust the memory offsets provided in the examples here. see the build's `flasher_args.json` for the correct offsets
-
-
-## Components
-
-Components are the basic makeup of an ESP-IDF project. Components are standalone code compiled to static libraries.
-Each component needs its own `CMakeLists.txt` file in order to compile correctly.
- Added custom components require a blank `component.mk` file to be added correctly.
- MORE COMING SOON
- 
