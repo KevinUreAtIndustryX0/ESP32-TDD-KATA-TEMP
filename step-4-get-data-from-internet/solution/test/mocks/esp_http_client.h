@@ -84,7 +84,7 @@ typedef struct {
     bool                        skip_cert_common_name_check;
 } esp_http_client_config_t;
 
-DECLARE_FAKE_VALUE_FUNC(esp_http_client_handle_t, esp_http_client_init, esp_http_client_config_t);
+DECLARE_FAKE_VALUE_FUNC(esp_http_client_handle_t, esp_http_client_init, esp_http_client_config_t* );
 DECLARE_FAKE_VALUE_FUNC(esp_err_t, esp_http_client_open, esp_http_client_handle_t, int);
 DECLARE_FAKE_VALUE_FUNC(int, esp_http_client_fetch_headers, esp_http_client_handle_t);
 DECLARE_FAKE_VALUE_FUNC(int, esp_http_client_read, esp_http_client_handle_t, char*, int);

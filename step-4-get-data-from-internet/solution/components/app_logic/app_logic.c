@@ -17,4 +17,5 @@ void app_init(void) {
 }
 
 void app_do_work(void) {
+    get_json();
 }

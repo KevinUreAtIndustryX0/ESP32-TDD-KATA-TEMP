@@ -52,3 +52,17 @@ TEST_F(app_init_fixture, calls_nvs_erase_and_then_flash_if_new_version_found) {
     EXPECT_EQ(nvs_flash_init_fake.call_count, 2);
     EXPECT_EQ(nvs_flash_erase_fake.call_count, 1);
 }
+
+
+FAKE_VOID_FUNC(get_json);
+
+class app_do_work_fixture : public testing::Test{
+    void TearDown() override {
+        RESET_FAKE(get_json);
+    }
+};
+
+TEST_F(app_do_work_fixture, calls_get_json) {
+    app_do_work();
+    EXPECT_EQ(get_json_fake.call_count, 1);
+}
