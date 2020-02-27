@@ -3,4 +3,6 @@
 
 void init_network_controller(void);
 
+void get_json(void);
+
 #endif

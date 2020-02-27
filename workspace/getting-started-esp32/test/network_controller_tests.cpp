@@ -5,6 +5,7 @@ extern "C" {
     #include "esp_event.h"
     #include "protocol_examples_common.h"
     #include "led_controller.h"
+    #include "esp_log.h"
 }
 #include "fff.h"
 
@@ -43,4 +44,18 @@ TEST_F(init_network_fixture, init_calls_set_led_on) {
     init_network_controller();
     EXPECT_EQ(set_led_state_fake.call_count, 1);
     EXPECT_EQ(set_led_state_fake.arg0_history[0], LED_ON);
+}
+
+DEFINE_FAKE_VOID_FUNC(ESP_LOGI, char*, char*, char*);
+
+class get_json_fixture : public testing::Test{
+    void TearDown() override {
+        RESET_FAKE(ESP_LOGI);
+    }
+};
+
+
+TEST_F(get_json_fixture, calls_log_with_data) {
+    get_json();
+    EXPECT_EQ(ESP_LOGI_fake.call_count, 1);
 }
