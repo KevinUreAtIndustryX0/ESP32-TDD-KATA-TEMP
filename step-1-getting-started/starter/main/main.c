@@ -1,6 +1,5 @@
 #include "main.h"
 #include <stdio.h>
-#include "esp_log.h"
 #include "CmakeConfig.h"
 #include "app_logic.h"
 
